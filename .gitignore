@@ -1,0 +1,11 @@
+libftTester/
+libft-tester-tokyo/
+../libft-unit-test/
+*.a
+*.o
+reuse/
+*.dSYM
+.vscode
+a.out
+.normignore
+cp_*
