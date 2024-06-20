@@ -6,7 +6,7 @@
 /*   By: kkurose <kkurose@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:31:53 by kkurose           #+#    #+#             */
-/*   Updated: 2024/05/04 22:26:00 by kkurose          ###   ########.fr       */
+/*   Updated: 2024/06/20 20:29:01 by kkurose          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*array;
 
-	if (count == 0 && size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
-	else if (count == 0 || size == 0)
-		return (NULL);
-	if (size > SIZE_MAX / count)
+	if (size && count > SIZE_MAX / size)
 		return (NULL);
 	array = (void *)malloc(count * size);
 	if (!array)
